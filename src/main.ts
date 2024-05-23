@@ -7,8 +7,16 @@ import 'zone.js';
   standalone: true,
   styles: `
   :host {
+    all: initial;
+
+    ::ng-deep * {
+      all: revert;
+    }
+  }
+
+  :host {
     display: block;
-    border: 1px dashed red;    
+    border: 1px dashed red; 
   }
 
   .row {
@@ -20,7 +28,7 @@ import 'zone.js';
   
   .cool-area {
     color: red;
-    background-color: aliceblue
+    background-color: aliceblue;
   }
   `,
   template: `
@@ -30,6 +38,7 @@ import 'zone.js';
       <div class="cool-area">My cool area</div>
     </div>
   `,
+  encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class App {
   name = 'Angular';
