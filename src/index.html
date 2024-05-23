@@ -5,7 +5,14 @@
     <meta charset="UTF-8" />
     <style>
       /* Global styles */
-      .cool-button {
+      .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+      }
+      
+      .cool-area {
         background-color: blue;
         color: white;
         border: 2px solid aqua;
@@ -19,8 +26,10 @@
     </style>
   </head>
   <body>
-    <button>Regular button</button>
-    <button class="cool-button">My cool button</button>
+    <div class="row">
+      <div>Regular area</div>
+      <div class="cool-area">My cool area</div>
+    </div>
     <app-root>Loading...</app-root>
   </body>
 </html>
