@@ -1,3 +1,3 @@
 # style-isolation-ngx
 
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/Iworb/style-isolation-ngx)
+This is the example of style isolation in Angular
