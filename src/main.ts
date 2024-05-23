@@ -10,20 +10,25 @@ import 'zone.js';
     display: block;
     border: 1px dashed red;    
   }
-  
-  .cool-button {
-    color: red;
-    background-color: aliceblue
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
   }
   
-  button + button {
-    margin-left: 8px;
+  .cool-area {
+    color: red;
+    background-color: aliceblue
   }
   `,
   template: `
     <h1>Hello from {{ name }}!</h1>
-    <button>Regular button</button>
-    <button class="cool-button">My cool button</button>
+    <div class="row">
+      <div>Regular area</div>
+      <div class="cool-area">My cool area</div>
+    </div>
   `,
 })
 export class App {
