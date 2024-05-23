@@ -1,0 +1,22 @@
+@use 'custom-theme.scss';
+
+:host {
+  display: block;
+  border: 1px dashed red; 
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.cool-area {
+  color: red;
+  background-color: aliceblue;
+}
+
+:host(app-root) {
+  @include custom-theme.use-theme();
+}
