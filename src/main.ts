@@ -1,14 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import 'zone.js';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  styles: `:host { display: block; border: 1px dashed red; } .cool-button { color: red; background-color: aliceblue }`,
+  styles: `
+  :host {
+    display: block;
+    border: 1px dashed red;    
+  }
+  
+  .cool-button {
+    color: red;
+    background-color: aliceblue
+  }
+  
+  button + button {
+    margin-left: 8px;
+  }
+  `,
   template: `
     <h1>Hello from {{ name }}!</h1>
-    <button class="cool-button">Button inside Angular</button>
+    <button>Regular button</button>
+    <button class="cool-button">My cool button</button>
   `,
 })
 export class App {
